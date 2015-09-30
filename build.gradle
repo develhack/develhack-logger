@@ -1,6 +1,5 @@
 buildscript {
 	repositories {
-		mavenLocal()
 		mavenCentral()
 		maven {
 			url 'https://plugins.gradle.org/m2/'
@@ -39,15 +38,15 @@ configurations {
 
 repositories {
 	mavenLocal()
-	mavenCentral()
+	jcenter()
 }
 
 dependencies {
-	compile 'com.develhack:develhack-core:0.9.+'
-	compile 'org.slf4j:slf4j-api:1.7.+'
-	testCompile 'org.testng:testng:6.8.+'
+	compile 'com.develhack:develhack-core:[0.9,1.0)'
+	compile 'org.slf4j:slf4j-api:[1.7,1.8)'
+	testCompile 'org.testng:testng:[6.8,6.9)'
 	apt "com.develhack:develhacked-lombok:0.1.3"
-	asciidoclet 'org.asciidoctor:asciidoclet:1.+'
+	asciidoclet 'org.asciidoctor:asciidoclet:[1,2)'
 }
 
 sourceSets {
